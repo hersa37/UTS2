@@ -155,7 +155,7 @@ public class UTS{
     * Method is called every time an object is put into panel
     * @return gbc GridBagConstraints
     **/
-    private static GridBagConstraints gridPlace(int x, int y, double weight){
+    public static GridBagConstraints gridPlace(int x, int y, double weight){
         GridBagConstraints gbc=new GridBagConstraints();
         gbc.fill=GridBagConstraints.HORIZONTAL;
         gbc.gridx=x;
@@ -166,7 +166,7 @@ public class UTS{
     /**Method used to reset the values of every text field and combo box to its
      * original value.  
      */
-    static void resetTF(){
+    public static void resetTF(){
         //default for name,address,phone is blank
         nameTF.setText("");
         addressTF.setText("");
@@ -183,7 +183,7 @@ public class UTS{
      * 
      * @return red - total number of red shirts
      */
-    static int redTotal(){
+    public static int redTotal(){
         int red=Integer.parseInt(redTFS.getText())+Integer.parseInt(redTFM.getText())
                 +Integer.parseInt(redTFL.getText());
         return red;
@@ -192,7 +192,7 @@ public class UTS{
      * 
      * @return blue - total number of blue shirts
      */
-    static int blueTotal(){
+    public static int blueTotal(){
         int blue=Integer.parseInt(blueTFS.getText())+Integer.parseInt(blueTFM.getText())
                 +Integer.parseInt(blueTFL.getText());
         return blue;
@@ -201,7 +201,7 @@ public class UTS{
      * 
      * @return total - total shirt price for both colors
      */
-    static int shirtPrice(){
+    public static int shirtPrice(){
         int total=(redTotal()*100000)+(blueTotal()*120000);
         return total;
     }
@@ -209,7 +209,7 @@ public class UTS{
      * Determines regional shipping price
      * @return regionShip - region shipping price
      */
-    static int regionShipPrice(){        
+    public static int regionShipPrice(){        
         String region=regionCB.getSelectedItem().toString();
         int regionShip;
         //switch condition for each region
@@ -228,7 +228,7 @@ public class UTS{
      * Calculates total shipping price
      * @return shipTotal
      */
-    static int shipTotalPrice(){        
+    public static int shipTotalPrice(){        
         int shipTotal=0;
         //iteration to add shipping cost for every 3 shirts
         for(int i=0;i<=(redTotal()+blueTotal());i+=3){
@@ -240,7 +240,7 @@ public class UTS{
      * Calculates total price
      * @return payment
      */
-    static int totalPayment(){
+    public static int totalPayment(){
         int payment;
         payment=shipTotalPrice()+shirtPrice();
         return payment;
