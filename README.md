@@ -15,6 +15,7 @@ Komponen:
 
 Breakdown alur program:
 
+
 main()<br/>| UTS()
 <br/>| | gridPlace(int x, int y, double weight): GridBagConstraints
 <br/>| | writer(String x)
