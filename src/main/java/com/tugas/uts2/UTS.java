@@ -128,7 +128,7 @@ public class UTS{
             public void actionPerformed(ActionEvent e){
                 //calls writer() with textFieldInput()
                 //adds ++order to textFieldInput() so it adds with each click
-                writer(textFieldInput(++order));
+                writer(textFieldInput());
                 //calls resetTF() to reset the textfields                
                 resetTF();         
             }});
@@ -262,6 +262,7 @@ public class UTS{
         {
             //object out streams out parameter x
             out.println(x);
+            System.out.println(x);
         //catch any error event    
         }catch(Exception e){
             //writes "error" in console if error is found
@@ -290,10 +291,9 @@ public class UTS{
      * @param order Number to determine the order of the string input
      * @return data - String output
      */
-    static public String textFieldInput(int order){
+    static public String textFieldInput(){
         //string of data to write
-        String data=order+","
-                +nameTF.getText()+","
+        String data="1,"+nameTF.getText()+","
                 +addressTF.getText()+","
                 //add ' to phoneTF cause phones start with 0
                 +"'"+phoneTF.getText()+","
