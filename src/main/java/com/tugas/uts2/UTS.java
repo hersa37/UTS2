@@ -13,6 +13,7 @@ import java.io.BufferedWriter;//enables writing to file
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.Writer;
+import java.util.Arrays;
 
 /**
  *
@@ -32,10 +33,8 @@ public class UTS{
     static JTextField blueTFS,blueTFM,blueTFL;
     //dropdown menu for region
     static JComboBox regionCB;
-    //used for list counter
-    int order=0;
     
-    //gui constructor
+
 
     /**
      * Constructor to make GUI.
@@ -68,7 +67,7 @@ public class UTS{
         nameTF=new JTextField();
         panel.add(nameTF,gridPlace(1,0,b));
         
-        addressLabel=new JLabel("Alamat:");
+        addressLabel=new JLabel("Alamat: ");
         panel.add(addressLabel,gridPlace(0,1,a));
         
         regionCB=new JComboBox(reg);//use reg array for dropdown menu
@@ -316,6 +315,12 @@ public class UTS{
     public static void main(String[] args) {
         //calls constructor
         new UTS();
+        String[] alamat;
+        
+        alamat=new String[]{"1","12","3","4","5"};
+        
+        System.out.println(Arrays.toString(alamat));
     }
+    
 
 }
