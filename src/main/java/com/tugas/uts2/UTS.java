@@ -318,7 +318,7 @@ public class UTS{
         String[] alamat;
         
         alamat=new String[]{"1","12","3","4","5"};
-        
+        System.out.println("Halo");
         System.out.println(Arrays.toString(alamat));
     }
     
